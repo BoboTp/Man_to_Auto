@@ -1,0 +1,52 @@
+---
+
+- hosts: wget_main
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Looping Wget for ten times
+      shell: /file_path/main.py >> /file_path/avg_wget_values.csv
+
+- hosts: version
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Getting the vtc Build version
+      raw: /file_path/verscript.sh
+
+
+- hosts: version_to_csv
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Having collection of all the versions we performed on
+      raw:  cat /file_path/version.txt >> /file_path/410version.csv
+
+
+- hosts: ver_wget_merge
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Merging Wget and the version into a csv
+      shell: /file_path/wget410ver.py
+
+- hosts: get_date
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Having collection of date  when we performed on
+      raw:  date +"%y-%m-%d" >> /file_path/date.csv
+
+
+- hosts: date_master_merge
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Adding date to the final csv
+      shell: /file_path/datemasterfinal.py

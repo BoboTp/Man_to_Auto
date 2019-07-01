@@ -1,0 +1,130 @@
+# inventory
+
+
+[get_tptp_data]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[main_410]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[main_average_410]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[get_date]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Combining_date_masterfinal]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[version_to_csv]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Combining_two_final]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Combining_masterfinal]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Getting_version_to_csv]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Combining_both_the_averages]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Combining_both_the_averages_and_version]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[FinalColumnsThruput]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Final_Delete]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Split_Delete]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[MasterVersion]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[FinalSplit_to_RawData]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[FinalColumns]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[ThreeTranspose]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[FinalThree]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[MasterThree]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[MasterBill]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[PreMasterBill]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Display_Percentage_lost]
+10.10.3.90  ansible_user=root ansible_become=True
+
+
+[Extract_Thru_Values]
+10.10.3.90  ansible_user=root ansible_become=True
+
+
+[mailserver]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Date_Version_RawData]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[version]
+10.10.3.91  ansible_user=root ansible_become=True
+
+
+[Main_comparison]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Nondvn2_nodes]
+10.10.3.90  ansible_user=root ansible_become=True
+
+
+[Nondvn1_nodes]
+10.10.3.92  ansible_user=root ansible_become=True
+
+
+[Extract_Values]
+10.10.3.90  ansible_user=root ansible_become=True
+
+
+[Mean_value]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Mean_value_Thruput]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Transpose]
+10.10.3.90  ansible_user=root ansible_become=True
+
+
+[Display]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[Display_Thruput]
+10.10.3.90  ansible_user=root ansible_become=True
+
+
+[Final_Comparison]
+10.10.3.90  ansible_user=root ansible_become=True
+
+
+[NonDvn]
+10.10.3.90  ansible_user=root ansible_become=True
+
+
+
+[local]
+127.0.0.1   ansible_connection=local

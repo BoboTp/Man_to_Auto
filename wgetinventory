@@ -1,0 +1,20 @@
+[wget_main]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[version]
+10.10.3.91  ansible_user=root ansible_become=True
+
+[version_to_csv]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[ver_wget_merge]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[get_date]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[date_master_merge]
+10.10.3.90  ansible_user=root ansible_become=True
+
+[compare_merge]
+10.10.3.90  ansible_user=root ansible_become=True

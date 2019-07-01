@@ -1,0 +1,72 @@
+---
+- hosts: version
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Getting the vtc Build version
+      raw: /file_path/verscript.sh
+
+
+- hosts: version_to_csv
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Having collection of all the versions we performed on
+      raw:  cat /file_path/version.txt >> /file_path/Latest_410_version.csv
+
+######################## Starting a iperf3 Server ##################################
+
+- hosts: Nondvn1_nodes
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Start the Iperf Server
+      shell: iperf3 --server --daemon
+
+
+########## Running the Iperf test FIRST time #####################
+
+- hosts: main_410
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Splitting the final values from the rest
+      raw: /file_path/410main.py
+
+
+- hosts: get_tptp_data
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Splitting the final values from the rest
+      raw: cat /file_path/tptp.csv > /file_path/main410_1_.csv
+
+########## Running the Iperf test Second time #####################
+- hosts: main_410
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Splitting the final values from the rest
+      raw: /file_path/410main.py
+
+- hosts: get_tptp_data
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Splitting the final values from the rest
+      raw: cat /file_path/tptp.csv > /file_path/main410_2_.csv
+################################################ IPERF PART DONE #################################################
+- hosts: main_average_410
+  become_user: root
+  become_method: su
+
+  tasks:
+    - name: Splitting the final values from the rest
+      raw: /file_path/410mainaverage.py
