@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from itertools import izip
 
-
+# Reading the Percentage loss csv and finding the average of it
 df = pd.read_csv("/file_path/FinalSplit.csv",sep=",", header=None)
 df = df.replace(")","")
 #print(df)
@@ -31,6 +31,7 @@ csv.writer(open("/file_path/Latest_410_avg.csv", "a")).writerows(a)
 
 ##########################################################################
 
+# Reading the Throughput csv and finding the average of it
 df = pd.read_csv("/file_path/thrusplit.csv",sep=",", header=None)
 df = df.replace(")","")
 #print(df)

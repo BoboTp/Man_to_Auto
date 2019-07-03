@@ -1,5 +1,10 @@
 #!/usr/bin/python
 
+
+# This is a script to run iperf between two machines and fint the Percentage loss and Throughput for UDP and throughput for TCP
+
+# The program loops for three different Streams and five different Bandwidths (15 values)
+ 
 import os
 import time
 import csv

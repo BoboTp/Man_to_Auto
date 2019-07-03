@@ -5,11 +5,13 @@ import time
 import csv
 import re
 
-
+#This command runs the iperfscript to run the iperf analysis and outputs the result to a csv file.
 
 os.system('''/file_path/iperfscript.py |awk '/sender|receiver/ { print$11","$12","$13","$6","$7","$8 }'> /file_path/tptp.csv''')
 
 
+
+# Using regex to split the necessary data like Percentage_loss and the Throughput
 f = open('/file_path/tptp.csv')
 r= re.compile('.*%\)')
 
@@ -32,6 +34,7 @@ b = columnzerolist [1:21:2]
 merge_list = a + b
 print merge_list
 
+# Genereate a separate csv file for the Percentage loss
 with open('/file_path/FinalSplit.csv', 'a') as myfile:
 	wr = csv.writer(myfile)
 	wr.writerow(merge_list)
@@ -62,6 +65,7 @@ c = row0 [91:185:22]
 merge_list = a + b + c
 print merge_list
 
+#Generate a separate file for throughput
 with open('/file_path/thrusplit.csv', 'a') as myfile:
 	wr = csv.writer(myfile)
      	wr.writerow(merge_list)
