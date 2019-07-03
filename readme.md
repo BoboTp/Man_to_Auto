@@ -1,4 +1,4 @@
-#Automating Manual Test Cases
+###Automating Manual Test Cases
 
 This is a script to run iperf between two machines and fint the Percentage loss and Throughput for UDP and throughput for TCP
 
